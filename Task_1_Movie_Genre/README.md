@@ -10,6 +10,7 @@ This repository contains code for movie genre classification using Multinomial N
 
 ## Usage
 
+- convert txt files into csv files.
 - Load and preprocess the training and testing data.
 - Combine 'title' and 'plot' into a single text column.
 - Vectorize the text using TF-IDF (Term Frequency-Inverse Document Frequency).
