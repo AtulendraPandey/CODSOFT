@@ -1,46 +1,13 @@
-# CODSOFT SEPTEMBER 2023 ML TASK 2 - Credit Card Fraud Detection
+# Credit Card Fraud Detection
 
-## Main Objective: *Fraud Credit Card Data Analysis and Detection*.
+## Overview
+This repository contains code for credit card fraud detection using machine learning techniques. The goal is to build models that can effectively identify fraudulent transactions, providing a robust solution for detecting suspicious activities in credit card transactions.
 
-This repository contains Python code for detecting credit card fraud using a Random Forest classifier. The code preprocesses transaction data, handles class imbalance, applies dimensionality reduction, and evaluates the model's performance.
+## Dataset
+The dataset used for this project is sourced from [https://www.kaggle.com/datasets/kartik2112/fraud-detection], and it contains information about credit card transactions. It includes various features such as transaction details, location information, and more.
 
-## Libraries and Techniques Used
+## Getting Started
 
-- **Pandas** (`pandas`) for data manipulation and analysis.
-- **Scikit-Learn** (`scikit-learn`) for machine learning tools, including RandomForestClassifier, StandardScaler, LabelEncoder, OneHotEncoder, and IncrementalPCA.
-- **Imbalanced-Learn** (`imblearn`) for oversampling with SMOTE to address class imbalance.
-
-## Code Overview
-
-1. **Import necessary libraries**: Import all the required libraries for the project, including pandas, numpy, scikit-learn components, imblearn, and tqdm for progress bars.
-2. **Load training and testing datasets**: Load the training and testing data from CSV files (`fraudTrain.csv` and `fraudTest.csv`).
-3. **Combine training and testing data**: Combine the datasets to ensure encoding consistency and feature extraction.
-4. **Drop irrelevant columns**: Drop columns that are irrelevant for fraud detection (customize based on your data).
-5. **Separate features and target variable**: Separate the dataset into features (X_combined) and the target variable (y_combined).
-6. **Encode categorical columns**: Use LabelEncoder to encode "merchant" and "category" columns and OneHotEncoder for other categorical variables.
-7. **Standardize numeric features**: Standardize the numeric features.
-8. **Combine encoded categorical and numeric features**: Combine one-hot encoded categorical features with standardized numeric features.
-9. **Split data back into training and test datasets**: Split the combined data back into training and test datasets.
-10. **Address class imbalance using SMOTE**: Use SMOTE to oversample the minority class in the training data.
-11. **Apply Incremental PCA for dimensionality reduction**: Apply Incremental PCA to reduce the dimensionality of the data.
-12. **Train the Random Forest model**: Define and train a Logistic Regression and classifier with the resampled and dimensionality-reduced data.
-13. **Predict using the trained model**: Predict fraud detection results using the trained Random Forest model.
-14. **Evaluate model performance**: Calculate and display accuracy, Cross-Validation Accuracy and classification report.
-
-### Usage
-
-1. Ensure you have the required libraries installed as mentioned in the requirements section.
-2. Place your training and testing data in CSV files named `fraudTrain.csv` and `fraudTest.csv`.
-3. Run the provided code to preprocess the data, train the Logistic Regression model, and evaluate fraud detection performance.
-4. Review the output, including accuracy, Cross-Validation Accuracy and classification report, to assess the model's performance.
-
-### TL;DR 
-
-> This code implements credit card fraud detection using a Random Forest classifier, involving data preprocessing, handling class imbalance with SMOTE, dimensionality reduction with Incremental PCA, and model evaluation. To use the code, ensure required libraries are installed, place your data in CSV files, run the code, and evaluate fraud detection performance with accuracy, Cross-Validation Accuracy and classification report.
-
-### Requirements
-
-- Python 3.x
-- Pandas (`pandas`)
-- Scikit-Learn (`scikit-learn`)
-- **Imbalanced-Learn** (`imblearn`)
+### Prerequisites
+- Python [3.x]
+- Libraries: pandas, scikit-learn, imbalanced-learn, tqdm, and others.
